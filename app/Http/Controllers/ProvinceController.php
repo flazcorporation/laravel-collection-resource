@@ -9,6 +9,6 @@ class ProvinceController extends Controller
     public function index()
     {
         $data = Province::with(['regencies'])->get();
-        return new RegencyCollection($data);
+        return new RegencyCollection(true, 'List of Data', $data);
     }
 }
